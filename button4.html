@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to NOIDEA</title>
+    <style>
+        /* Define the neon colors */
+        :root {
+            --neon-glow-color: #39ff14; /* Neon green */
+            --button-bg-color: #0d0d0d;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0a0a0a;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .neon-button {
+            /* Basic button styling */
+            background: var(--button-bg-color);
+            color: var(--neon-glow-color);
+            border: 2px solid var(--neon-glow-color);
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+
+            /* Neon glow effect */
+            box-shadow: 
+                0 0 10px rgba(57, 255, 20, 0.5),   /* Inner glow */
+                0 0 20px rgba(57, 255, 20, 0.5),   /* Medium glow */
+                0 0 40px rgba(57, 255, 20, 0.3),   /* Outer glow */
+                0 0 80px rgba(57, 255, 20, 0.1);   /* Farthest glow */
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .neon-button:hover {
+            background: var(--neon-glow-color);
+            color: var(--button-bg-color);
+            box-shadow: 
+                0 0 5px var(--neon-glow-color),
+                0 0 20px var(--neon-glow-color),
+                0 0 50px var(--neon-glow-color),
+                0 0 100px var(--neon-glow-color);
+        }
+
+        .neon-button .icon {
+            margin-left: 10px;
+            transition: transform 0.3s ease-in-out;
+            fill: currentColor; /* Ensures the SVG icon uses the button's text color */
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+
+        .neon-button:hover .icon {
+            transform: translateX(5px); /* Arrow movement on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The single button with the onclick event -->
+    <a href="https://www.youtube.com/watch?v=BN_2iBGu_Ws" target="_blank" rel="noopener noreferrer" class="neon-button">
+        Subscribe to NOIDEA
+        <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+    </a>
+
+</body>
+</html>
